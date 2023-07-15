@@ -1,0 +1,24 @@
+rocketmq:
+  # rocketMQ的命名服务器，格式为: host:port;host:port
+  name-server: 192.168.101.17:21008
+  producer:
+    # 生产者的组名
+    group: GID_PRODUCER
+    # 发送消息超时时间 默认3秒
+    send-message-timeout: 5000
+    # 异步重试次数
+    retry-times-when-send-async-failed: 2
+  consumer:
+    message:
+      group: GID_UATCROSS_NET_TRANSFER_DATA
+      topic: UATCROSS_NET_TRANSFER_DATA
+    file:
+      group: GID_UATREVIEW_TRIGGER
+      topic: UATREVIEW_TRIGGER
+
+
+elasticsearch:
+  host: 192.168.101.17
+  port: 21005
+  username:
+  password:
